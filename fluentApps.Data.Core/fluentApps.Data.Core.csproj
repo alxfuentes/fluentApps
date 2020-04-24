@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D65748D9-AAFA-45EE-A125-9AF0C36FB806}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fluentApps.Data.Core</RootNamespace>
+    <AssemblyName>fluentApps.Data.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.1.2\lib\net461\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.2.7\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AppCatalog.cs" />
+    <Compile Include="Admin\AppMenuOption.cs" />
+    <Compile Include="Admin\AppRole.cs" />
+    <Compile Include="Admin\AppUser.cs" />
+    <Compile Include="Admin\Maps\AppCatalogMap.cs" />
+    <Compile Include="Admin\Maps\AppMenuOptionMap.cs" />
+    <Compile Include="Admin\Maps\AppRoleMap.cs" />
+    <Compile Include="Admin\Maps\AppUserMap.cs" />
+    <Compile Include="Admin\Repository\AppCatalogRepository.cs" />
+    <Compile Include="Admin\Repository\AppMenuOptionRepository.cs" />
+    <Compile Include="Admin\Repository\AppRoleRepository.cs" />
+    <Compile Include="Admin\Repository\AppUserRepository.cs" />
+    <Compile Include="Common\Address.cs" />
+    <Compile Include="Common\DomainObject.cs" />
+    <Compile Include="Common\GeoLocation.cs" />
+    <Compile Include="Common\IHasAssignedId.cs" />
+    <Compile Include="Common\Maps\AddressMap.cs" />
+    <Compile Include="Common\Maps\GeoLocationMap.cs" />
+    <Compile Include="Common\Maps\ObjectValueMap.cs" />
+    <Compile Include="Common\Maps\PersonMap.cs" />
+    <Compile Include="Common\Maps\RecordLogMap.cs" />
+    <Compile Include="Common\Maps\ScheduleMap.cs" />
+    <Compile Include="Common\ObjectValue.cs" />
+    <Compile Include="Common\Person.cs" />
+    <Compile Include="Common\PersonIdType.cs" />
+    <Compile Include="Common\RecordLog.cs" />
+    <Compile Include="Common\Schedule.cs" />
+    <Compile Include="Company\Branch.cs" />
+    <Compile Include="Company\Channel.cs" />
+    <Compile Include="Company\Company.cs" />
+    <Compile Include="Company\Country.cs" />
+    <Compile Include="Company\County.cs" />
+    <Compile Include="Company\Currency.cs" />
+    <Compile Include="Company\Department.cs" />
+    <Compile Include="Company\Location.cs" />
+    <Compile Include="Company\Maps\BranchMap.cs" />
+    <Compile Include="Company\Maps\ChannelMap.cs" />
+    <Compile Include="Company\Maps\CompanyMap.cs" />
+    <Compile Include="Company\Maps\CountryMap.cs" />
+    <Compile Include="Company\Maps\CountyMap.cs" />
+    <Compile Include="Company\Maps\CurrencyMap.cs" />
+    <Compile Include="Company\Maps\DepartmentMap.cs" />
+    <Compile Include="Company\Maps\LocationMap.cs" />
+    <Compile Include="Company\Maps\StateMap.cs" />
+    <Compile Include="Company\Repository\BranchRepository.cs" />
+    <Compile Include="Company\Repository\ChannelRepository.cs" />
+    <Compile Include="Company\Repository\CompanyRepository.cs" />
+    <Compile Include="Company\Repository\CountryRepository.cs" />
+    <Compile Include="Company\Repository\CountyRepository.cs" />
+    <Compile Include="Company\Repository\CurrencyRepository.cs" />
+    <Compile Include="Company\Repository\DepartmentRepository.cs" />
+    <Compile Include="Company\Repository\LocationRepository.cs" />
+    <Compile Include="Company\Repository\StateRepository.cs" />
+    <Compile Include="Company\State.cs" />
+    <Compile Include="HumanCapital\Employee.cs" />
+    <Compile Include="HumanCapital\Maps\EmployeeMap.cs" />
+    <Compile Include="HumanCapital\Repository\EmployeeRepository.cs" />
+    <Compile Include="Inventory\Maps\StockMap.cs" />
+    <Compile Include="Inventory\Maps\StockTransferLineMap.cs" />
+    <Compile Include="Inventory\Maps\StockTransferMap.cs" />
+    <Compile Include="Inventory\Maps\WarehouseMap.cs" />
+    <Compile Include="Inventory\Repository\StockRepository.cs" />
+    <Compile Include="Inventory\Repository\StockTransferRepository.cs" />
+    <Compile Include="Inventory\Repository\WarehouseRepository.cs" />
+    <Compile Include="Inventory\Stock.cs" />
+    <Compile Include="Inventory\StockTransfer.cs" />
+    <Compile Include="Inventory\StockTransferLine.cs" />
+    <Compile Include="Inventory\Warehouse.cs" />
+    <Compile Include="MasterData\BusinessPartner.cs" />
+    <Compile Include="MasterData\Maps\BusinessPartnerMap.cs" />
+    <Compile Include="MasterData\Maps\PartnerGroupMap.cs" />
+    <Compile Include="MasterData\Maps\PartnerSegmentMap.cs" />
+    <Compile Include="MasterData\Maps\PriceListMap.cs" />
+    <Compile Include="MasterData\Maps\ProductAreaMap.cs" />
+    <Compile Include="MasterData\Maps\ProductBrandMap.cs" />
+    <Compile Include="MasterData\Maps\ProductCategoryMap.cs" />
+    <Compile Include="MasterData\Maps\ProductFamilyMap.cs" />
+    <Compile Include="MasterData\Maps\ProductMap.cs" />
+    <Compile Include="MasterData\Maps\ProductPriceMap.cs" />
+    <Compile Include="MasterData\Maps\SalesPersonMap.cs" />
+    <Compile Include="MasterData\PartnerGroup.cs" />
+    <Compile Include="MasterData\PartnerSegment.cs" />
+    <Compile Include="MasterData\PriceList.cs" />
+    <Compile Include="MasterData\Product.cs" />
+    <Compile Include="MasterData\ProductArea.cs" />
+    <Compile Include="MasterData\ProductBrand.cs" />
+    <Compile Include="MasterData\ProductCategory.cs" />
+    <Compile Include="MasterData\ProductFamily.cs" />
+    <Compile Include="MasterData\ProductPrice.cs" />
+    <Compile Include="MasterData\Repository\BusinessPartnerRepository.cs" />
+    <Compile Include="MasterData\Repository\PartnerGroupRepository.cs" />
+    <Compile Include="MasterData\Repository\PartnerSegmentRepository.cs" />
+    <Compile Include="MasterData\Repository\PriceListRepository.cs" />
+    <Compile Include="MasterData\Repository\ProductAreaRepository.cs" />
+    <Compile Include="MasterData\Repository\ProductBrandRepository.cs" />
+    <Compile Include="MasterData\Repository\ProductCategoryRepository.cs" />
+    <Compile Include="MasterData\Repository\ProductFamilyRepository.cs" />
+    <Compile Include="MasterData\Repository\ProductPriceRepository.cs" />
+    <Compile Include="MasterData\Repository\ProductRepository.cs" />
+    <Compile Include="MasterData\Repository\SalesPersonRepository.cs" />
+    <Compile Include="MasterData\SalesPerson.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transactions\DocumentSeries.cs" />
+    <Compile Include="Transactions\EntityType.cs" />
+    <Compile Include="Transactions\Maps\DocumentSeriesMap.cs" />
+    <Compile Include="Transactions\Maps\EntityTypeMap.cs" />
+    <Compile Include="Transactions\Repository\DocumentSeriesRepository.cs" />
+    <Compile Include="Transactions\Repository\EntityTypeRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\fluentApps.Data.Base\fluentApps.Data.Base.csproj">
+      <Project>{e561ce76-a993-4f8d-9bb9-47a58851e073}</Project>
+      <Name>fluentApps.Data.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\fluentApps.Utils\fluentApps.Utils.csproj">
+      <Project>{0f914d88-401e-4ec9-bc00-510260e35479}</Project>
+      <Name>fluentApps.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Procurement\" />
+    <Folder Include="Sales\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

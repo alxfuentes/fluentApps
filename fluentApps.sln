@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fluentApps.Data.Base", "flu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fluentApps.Utils", "fluentApps.Utils\fluentApps.Utils.csproj", "{0F914D88-401E-4EC9-BC00-510260E35479}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fluentApps.Data.Core", "fluentApps.Data.Core\fluentApps.Data.Core.csproj", "{D65748D9-AAFA-45EE-A125-9AF0C36FB806}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0F914D88-401E-4EC9-BC00-510260E35479}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F914D88-401E-4EC9-BC00-510260E35479}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F914D88-401E-4EC9-BC00-510260E35479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D65748D9-AAFA-45EE-A125-9AF0C36FB806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D65748D9-AAFA-45EE-A125-9AF0C36FB806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D65748D9-AAFA-45EE-A125-9AF0C36FB806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D65748D9-AAFA-45EE-A125-9AF0C36FB806}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

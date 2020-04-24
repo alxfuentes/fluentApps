@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fluentApps.Win", "fluentApps.Win\fluentApps.Win.csproj", "{969532CE-62A2-4A3E-9202-43152A2ADD76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fluentApps.Data.Base", "fluentApps.Data.Base\fluentApps.Data.Base.csproj", "{E561CE76-A993-4F8D-9BB9-47A58851E073}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fluentApps.Utils", "fluentApps.Utils\fluentApps.Utils.csproj", "{0F914D88-401E-4EC9-BC00-510260E35479}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{969532CE-62A2-4A3E-9202-43152A2ADD76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{969532CE-62A2-4A3E-9202-43152A2ADD76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{969532CE-62A2-4A3E-9202-43152A2ADD76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E561CE76-A993-4F8D-9BB9-47A58851E073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E561CE76-A993-4F8D-9BB9-47A58851E073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E561CE76-A993-4F8D-9BB9-47A58851E073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E561CE76-A993-4F8D-9BB9-47A58851E073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F914D88-401E-4EC9-BC00-510260E35479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F914D88-401E-4EC9-BC00-510260E35479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F914D88-401E-4EC9-BC00-510260E35479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F914D88-401E-4EC9-BC00-510260E35479}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

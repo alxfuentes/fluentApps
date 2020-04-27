@@ -8,29 +8,29 @@ namespace fluentApps.Data.Core.Common
         private DateTime createTime;
         private DateTime updateTime;
         private DateTime? syncTime;
-       
-        public virtual Guid RecordId 
-        { 
+
+        public virtual Guid RecordId
+        {
             get { return recordId; }
             set { recordId = value; }
         }
-        
+
         public virtual int CreateUser { get; set; }
         public virtual string CreateHost { get; set; }
 
-        public virtual DateTime CreateTime 
+        public virtual DateTime CreateTime
         {
             get { return createTime; }
-            set { createTime = value; } 
+            set { createTime = value; }
         }
 
         public virtual int UpdateUser { get; set; }
         public virtual string UpdateHost { get; set; }
-        
-        public virtual DateTime UpdateTime 
+
+        public virtual DateTime UpdateTime
         {
             get { return updateTime; }
-            set { updateTime = value; } 
+            set { updateTime = value; }
         }
 
         public virtual DateTime? SyncTime
@@ -39,30 +39,42 @@ namespace fluentApps.Data.Core.Common
             set { syncTime = value; }
         }
 
-        public virtual int RecSystem { get; set; }
-        public virtual int RecDelete { get; set; }
-        public virtual int RecSelect { get; set; }
-        public virtual int RecActive { get; set; }
-        public virtual int RecState { get; set; }
-        public virtual int RecSync { get; set; }
+        public virtual recYesNo RecSystem { get; set; }
+        public virtual recYesNo RecSelect { get; set; }
+        public virtual recYesNo RecActive { get; set; }
+        public virtual recState RecState { get; set; }
+        public virtual recYesNo RecSync { get; set; }
 
         public RecordLog()
         {
             recordId = Guid.NewGuid();
             createTime = DateTime.Now;
-            updateTime = DateTime.Now;
+            updateTime = createTime;
 
-            RecSystem = 0;
-            RecDelete = 0;
-            RecSelect = 0;
-            RecActive = 1;
-            RecState = 1;
-            RecSync = 0;
+            RecSystem = recYesNo.No;
+            RecSelect = recYesNo.No;
+            RecActive = recYesNo.Yes;
+            RecState = recState.New;
+            RecSync = recYesNo.Yes;
         }
-        
+
         public override string ToString()
         {
             return this.UpdateTime.ToShortDateString();
         }
+
+    }
+
+    public enum recYesNo
+    {
+        No,
+        Yes
+    }
+
+    public enum recState
+    {
+        New,
+        Updated,
+        Deleted
     }
 }

@@ -15,7 +15,6 @@ namespace fluentApps.Data.Core.Common.Maps
             Map(r => r.UpdateTime);
             Map(r => r.SyncTime);
             Map(r => r.RecSystem);
-            Map(r => r.RecDelete);
             Map(r => r.RecSelect);
             Map(r => r.RecActive);
             Map(r => r.RecState );
